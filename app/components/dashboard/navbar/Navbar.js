@@ -12,13 +12,13 @@ import {
 const Navbar = () => {
   const pathName= usePathname()
   return (
-    <div className='bg-orange-700 p-4 rounded-[10px] flex justify-between items-center'>
+    <div className='bg-indigo-700 p-4 rounded-[10px] flex justify-between items-center'>
       <div>
       <p className='capitalize '>{pathName.split("/").pop()}</p>
   
       </div>
       <div className="flex items-center  lg:gap-2">
-        <div className="flex items-center rounded-[10px] bg-orange-200 p-1">
+        <div className="flex items-center rounded-[10px] bg-indigo-300 p-1">
           <MdSearch  className='mx-1'/>
           <input type="text" placeholder="Search..." className=" focus:border-none bg-transparent border-none w-[50%] lg:w-[100%]" />
         </div>
