@@ -11,8 +11,10 @@ const dashboard = () => {
   <Card/>
   <Card/>
   </div>
-  <Chart/>
+
   <Transaction/>
+
+  <Chart/>
     </div>
     <div className='col-span-3  h-screen p-3'>
       Rightbar
