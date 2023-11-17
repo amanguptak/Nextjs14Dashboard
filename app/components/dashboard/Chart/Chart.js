@@ -1,6 +1,6 @@
 "use client"
 import React, { PureComponent } from 'react';
-import {  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -42,9 +42,9 @@ const data = [
 
 const Chart = () => {
   return (
-    <div className="bg-indigo-900 mt-3">
-      <h2 className="">Weekly Recap</h2>
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="bg-indigo-900  p-3 w-full h-[420px] mt-3 rounded-md">
+      <h2 className="p-3">Weekly Recap</h2>
+      <ResponsiveContainer width="100%" height="85%" className="pt-3">
         <LineChart
           width={500}
           height={300}
@@ -59,7 +59,7 @@ const Chart = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
+          <Tooltip  contentStyle={{background:"#1e1b4b", border:"none"}} />
           <Legend />
           <Line type="monotone" dataKey="visit" stroke="#8884d8" strokeDasharray="5 5" />
           <Line type="monotone" dataKey="click" stroke="#82ca9d" strokeDasharray="3 4 5 2" />
