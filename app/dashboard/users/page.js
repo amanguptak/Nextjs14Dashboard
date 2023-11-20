@@ -1,8 +1,8 @@
 import React from 'react'
-
+import User from '@/app/components/dashboard/Users/User'
 const Users = () => {
   return (
-    <div>Users</div>
+    <div><User/></div>
   )
 }
 
