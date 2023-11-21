@@ -1,9 +1,9 @@
 import React from 'react'
-
-const Products = () => {
+import Products from '@/app/components/dashboard/Products/Products'
+const products = () => {
   return (
-    <div>All products</div>
+    <div><Products/></div>
   )
 }
 
-export default Products
+export default products
