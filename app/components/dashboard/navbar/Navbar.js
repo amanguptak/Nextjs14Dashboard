@@ -18,10 +18,10 @@ const Navbar = () => {
   
       </div>
       <div className="flex items-center  lg:gap-2">
-        <div className="flex items-center rounded-[10px] bg-indigo-300 p-1">
+        {/* <div className="flex items-center rounded-[10px] bg-indigo-300 p-1">
           <MdSearch  className='mx-1'/>
           <input type="text" placeholder="Search..." className=" focus:border-none bg-transparent border-none w-[50%] lg:w-[100%]" />
-        </div>
+        </div> */}
         <div className="flex lg:gap-3">
           <MdOutlineChat size={20}  />
           <MdNotifications size={20}   />

@@ -1,16 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
+
 import Search from '../Search/Search'
 import Pageintaion from '../Pageniaton/Pageintaion'
+import Link from 'next/link'
 const Products = () => {
-    const search="nothing"
+   
   return (
     <div className=' mt-4 p-3 bg-indigo-900 rounded-xl'>
         <div className="top flex items-center justify-between ">
         <Search placeholder="Search for user.."/>
-       
+        <Link href="/dashboard/products/addproducts">
             <button className='bg-indigo-600 text-sm rounded-sm p-1 px-2 hover:bg-indigo-800 '> Add New</button>
-       
+            </Link>
         </div>
 
         <div className="bottom">
