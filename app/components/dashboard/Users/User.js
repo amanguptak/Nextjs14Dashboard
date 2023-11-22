@@ -39,7 +39,7 @@ const User = () => {
                  <span>10/12/2023</span>
                 </td>
                 <td className='[&_button]:rounded-sm [&_button]:px-2 [&_button]:p-1 [&_button]:mx-1 [&_button]:border-none'>
-                  <button className=' bg-green-400 hover:bg-green-600'>View</button>
+                  <Link href="/dashboard/users/id"><button className=' bg-green-400 hover:bg-green-600'>View</button></Link>
                   <button className=' bg-red-500 hover:bg-red-600'>Delete</button>
                 </td>
               </tr>

@@ -33,7 +33,7 @@ const page = () => {
           className="col-span-12 m-4  bg-indigo-950 rounded-md  p-5 my-2  box-border"
         />
 
-        <button className="col-span-12 m-4 p-3 rounded-md hover:bg-orange-600 bg-orange-500">
+        <button className="col-span-12 m-4 p-3 rounded-md hover:bg-orange-500 bg-orange-400">
           Submit
         </button>
       </form>
