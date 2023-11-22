@@ -19,7 +19,9 @@ const SingleUser = () => {
         </p>
         <form
           action=""
-          className="flex-col rounded-md p-4 [&_div]:mt-2 text-sm [&_input]:rounded-md"
+        //   className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-red-800"
+
+          className="flex-col rounded-md p-4 [&_div]:mt-2 text-sm [&_input]:rounded-m"
         >
           <div className="field flex flex-col ">
             <label htmlFor="username" className="mb-2">
@@ -72,8 +74,11 @@ const SingleUser = () => {
           <button className=" w-full mt-4  p-3 rounded-md hover:bg-orange-500 bg-orange-400">
             Update
           </button>
+
         </form>
       </div>
+      {/* <input type="text"         className="w-full text-lg py-2  border-gray-300 focus:outline-none focus:border-red-800"
+ /> */}
     </div>
   );
 };
