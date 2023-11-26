@@ -1,5 +1,5 @@
 import React from "react";
-
+import {addUser} from "@/app/lib/actions";
 const AddUser = () => {
   return (
     <div className="container mt-3 bg-indigo-800 rounded-md">
@@ -7,7 +7,7 @@ const AddUser = () => {
         Add Users
       </p>
       <form
-        action=""
+        action={addUser}
         className="grid lg:grid-cols-12   [&_input]:rounded-md [&_input]:m-4 [&_input]:p-3 [&_input]:bg-indigo-950"
       >
         <input type="text" placeholder="Name" name="username" className="col-span-6" />
@@ -40,7 +40,7 @@ const AddUser = () => {
         <input type="text" placeholder="Address" name="address" className="col-span-12" />
       
 
-        <button type="submit" className="col-span-12 m-4 p-3 rounded-md hover:bg-orange-500 bg-orange-400">
+        <button className="col-span-12 m-4 p-3 rounded-md hover:bg-orange-500 bg-orange-400">
           Submit
         </button>
       </form>

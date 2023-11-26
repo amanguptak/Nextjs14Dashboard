@@ -5,7 +5,7 @@ const Users = async() => {
   const users = await getAllUsers()
   console.log(users)
   return (
-    <div><User/></div>
+    <div><User Users={users}/></div>
   )
 }
 
