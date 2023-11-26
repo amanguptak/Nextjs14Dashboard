@@ -8,32 +8,39 @@ const AddUser = () => {
       </p>
       <form
         action=""
-        className="grid lg:grid-cols-12  [&_input]:rounded-md [&_input]:m-4 [&_input]:p-3 [&_input]:bg-indigo-950"
+        className="grid lg:grid-cols-12   [&_input]:rounded-md [&_input]:m-4 [&_input]:p-3 [&_input]:bg-indigo-950"
       >
-        <input type="text" placeholder="Title" className="col-span-6" />
+        <input type="text" placeholder="Name" name="username" className="col-span-6" />
         <select
-          name=""
-          id=""
-          placeholder="Category"
+          name="isAdmin"
+          id="isAdmin"
+       
           className="col-span-6 m-4 p-3 bg-indigo-950 rounded-md"
         >
-          <option value="">Select</option>
-          <option value="">Oversized</option>
-          <option value="">Normal</option>
-          <option value="">Kid</option>
-          <option value="">UniSex</option>
+          <option value="">isAdmin</option>
+          <option value={true}>Yes</option>
+          <option value={false}>No</option>
+         
         </select>
-        <input type="text" placeholder="Price" className="col-span-6" />
-        <input type="text" placeholder="Size" className="col-span-6" />
-        <input type="text" placeholder="Stock" className="col-span-6" />
-        <input type="text" placeholder="Version" className="col-span-6" />
-        <textarea
-          type="text"
-          placeholder="About"
-          className="col-span-12 m-4  bg-indigo-950 rounded-md  p-5 my-2  box-border"
-        />
 
-        <button className="col-span-12 m-4 p-3 rounded-md hover:bg-orange-500 bg-orange-400">
+        <select
+          name="isActive"
+          id="isActive"
+        
+          className="col-span-6 m-4 p-3 bg-indigo-950 rounded-md"
+        >
+          <option value="">isActive</option>
+          <option value={true}>Yes</option>
+          <option value={false}>No</option>
+         
+        </select>
+        <input type="email" placeholder="Email" name="email" className="col-span-6" />
+        <input type="password" placeholder="Password" name="password" className="col-span-6" />
+        <input type="number" placeholder="Phone" name="phone" className="col-span-6" />
+        <input type="text" placeholder="Address" name="address" className="col-span-12" />
+      
+
+        <button type="submit" className="col-span-12 m-4 p-3 rounded-md hover:bg-orange-500 bg-orange-400">
           Submit
         </button>
       </form>

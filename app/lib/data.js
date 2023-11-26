@@ -1,5 +1,5 @@
 import { User } from "./models"
-import {connectToDatabase} from "./utils"
+import {connectToDatabase} from "./connection"
 
 export const getAllUsers = async()=>{
 
