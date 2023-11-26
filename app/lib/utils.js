@@ -1,19 +1,20 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 // Replace 'your_database_url' with the actual connection string for your MongoDB database.
-const dbUrl = process.env.MONGO;
+const MONGO = ""
 
-const connectToDatabase = async () => {
+
+export const connectToDatabase = async () => {
     try {
         // Connect to the MongoDB database
-        await mongoose.connect(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
 
         // Get the default connection
         const db = mongoose.connection;
 
         // Event listeners for connection events
         db.on('connected', () => {
-            console.log('Mongoose connected to ' + dbUrl);
+            console.log('Mongoose connected to ');
         });
 
         db.on('error', (err) => {
@@ -37,4 +38,19 @@ const connectToDatabase = async () => {
 };
 
 // Call the asynchronous function to connect to the database
-connectToDatabase();
+
+
+// import mongoose from "mongoose";
+
+// const connection = {};
+
+// export const connectToDB = async () => {
+//   try {
+//     if (connection.isConnected) return;
+//     const db = await mongoose.connect(MONGO);
+//     connection.isConnected = db.connections[0].readyState;
+//   } catch (error) {
+//     console.log(error)
+//     throw new Error(error);
+//   }
+// };
