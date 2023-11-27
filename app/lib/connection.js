@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 export const connectToDatabase = async () => {
     try {
         // Connect to the MongoDB database
-        await mongoose.connect(MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true });
 
         // Get the default connection
         const db = mongoose.connection;
