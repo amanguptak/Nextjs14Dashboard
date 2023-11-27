@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 // Replace 'your_database_url' with the actual connection string for your MongoDB database.
+const MONGO = "mongodb+srv://amangupta:animeuchia92@cluster0.3sewu3a.mongodb.net/amandashboard?retryWrites=true&w=majority"
 
 
 

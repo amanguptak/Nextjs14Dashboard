@@ -3,7 +3,7 @@ import React from 'react'
 import Search from '../Search/Search'
 import Pageintaion from '../Pageniaton/Pageintaion'
 import Link from 'next/link'
-const Products = () => {
+const Products = ({Product}) => {
    
   return (
     <div className=' mt-4 p-3 bg-indigo-900 rounded-xl'>
@@ -27,27 +27,31 @@ const Products = () => {
               </tr>
             </thead>
             <tbody className='[&_td]:text-sm'>
-              <tr>
+              {
+                Product?.map((product ,index) =>(
+                  <tr key={index}>
               <td className='flex items-center gap-2'> <img
               className="h-8 w-8 rounded-full"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
               alt=""
             />
-            <span>Itachi T-shirts </span>
+            <span>{product.title} </span>
             </td>
-                <td className='p-3'>Best quality product by AnimeUchicha</td>
-                <td className='p-3'>600Rs</td>
+                <td className='p-3'>{product.about}</td>
+                <td className='p-3'>{product.price}</td>
                 <td className='p-3'>
                  <span>10/12/2023</span>
                 </td>
                 <td className='p-3'>
-                 <span className='text-green-400'>20</span>
+                 <span className='text-green-400'>{product.stock}</span>
                 </td>
                 <td className='[&_button]:rounded-sm [&_button]:px-2 [&_button]:p-1 [&_button]:mx-1 [&_button]:border-none'>
                   <button className=' bg-green-400 hover:bg-green-600'>View</button>
                   <button className=' bg-red-500 hover:bg-red-600'>Delete</button>
                 </td>
               </tr>
+                ))
+              }
               
             </tbody>
           </table>
