@@ -1,5 +1,5 @@
 import React from 'react'
-
+import moment from 'moment';
 import Search from '../Search/Search'
 import Pageintaion from '../Pageniaton/Pageintaion'
 import Link from 'next/link'
@@ -40,7 +40,7 @@ const Products = ({Product}) => {
                 <td className='p-3'>{product.about}</td>
                 <td className='p-3'>{product.price}</td>
                 <td className='p-3'>
-                 <span>10/12/2023</span>
+                 <span>{moment(product.createdAt).format("MMM Do YY")}</span>
                 </td>
                 <td className='p-3'>
                  <span className='text-green-400'>{product.stock}</span>
