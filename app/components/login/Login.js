@@ -187,7 +187,8 @@ const Login = () => {
                   </div>
                   <input
                     className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-orange-600"
-                    type
+                    type="email"
+                    name="email"
                     placeholder="aman@gmail.com"
                   />
                 </div>
@@ -207,7 +208,8 @@ const Login = () => {
                   </div>
                   <input
                     className="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-orange-600"
-                    type
+                    type="text"
+                    name="password"
                     placeholder="Enter your password"
                   />
                 </div>
