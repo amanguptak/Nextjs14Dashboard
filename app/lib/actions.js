@@ -58,10 +58,13 @@ export const addProduct = async (formData) => {
 }
 
 
-export const authenticate = async () => {
+export const authenticate = async (formData) => {
+  console.log("checkData",formData)
+  const { email, password } =  Object.fromEntries(formData);;
+
   try {
-    await signIn("google")
-  }catch(err){
-    console.log(err)
+    await signIn("credentials", { email, password });
+  } catch (err) {
+    return "Wrong Credentials!";
   }
-}
+};

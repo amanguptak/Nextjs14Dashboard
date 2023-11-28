@@ -183,7 +183,7 @@ const Login = () => {
               Log in
             </h2>
             <div className="mt-12">
-              <form action={authenticate}>
+              <form action = {authenticate}>
                 <div>
                   <div className="text-sm font-bold text-gray-700 tracking-wide">
                     Email Address
@@ -225,11 +225,12 @@ const Login = () => {
                     Log In
                   </button>
              
-                  <Button/>
+               
      
 
                 </div>
               </form>
+              <Button/>
               <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
                 Don't have an account ?{" "}
                 <Link  href="/register" className="cursor-pointer text-orange-600 hover:text-orange-800">
