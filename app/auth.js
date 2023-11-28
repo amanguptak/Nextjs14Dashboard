@@ -1,17 +1,17 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import GoogleProvider from "next-auth/providers/google"
-import { authConfig } from "@/authConfig"
+import { authConfig } from "@/auth.config"
 import { connectToDatabase } from "./lib/connection"
 import { User } from "./lib/models";
 import bcrypt from "bcrypt";
 
 const login = async (credentials) => {
   try {
-    connectToDB();
-    const user = await User.findOne({ email: credentials.email });
-
-    if (!user || !user.isAdmin) throw new Error("Wrong credentials!");
+    connectToDatabase();
+    const user = await User.findOne({email: credentials.email});
+    console.log("user catched",user)
+    if (!user) throw new Error("Wrong credentials!");
 
     const isPasswordCorrect = await bcrypt.compare(
       credentials.password,
@@ -40,16 +40,16 @@ export const {signIn,signOut,auth}= NextAuth({
           }
         },
       }),
-    GoogleProvider({
+   
+      GoogleProvider({
         clientId:process.env.GOOGLE_ID,
         clientSecret:process.env.GOOGLE_SECRET,
     }),
-
   ],
 })
 
 
-
+ 
 
 
 // // export default NextAuth({

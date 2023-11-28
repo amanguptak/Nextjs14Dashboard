@@ -76,8 +76,9 @@ const menuItems = [
     ],
   },
 ];
-
-const Sidebar = () => {
+import { auth ,signOut} from "@/app/auth";
+const Sidebar = async() => {
+  const { user } = await auth();
   return (
     <div className="sticky">
       <div className="flex items-center justify-between h-14   px-3 rounded-[10px] mb-3">
@@ -112,10 +113,21 @@ const Sidebar = () => {
           </div>
         );
       })}
-      <button className="bg-none border-none flex items-center gap-8 rounded-[8px]  hover:bg-orange-200 hover:text-gray-800 mx-2 p-3 w-[95%]">
+      {/* <button className="bg-none border-none flex items-center gap-8 rounded-[8px]  hover:bg-orange-200 hover:text-gray-800 mx-2 p-3 w-[95%]">
         {" "}
         <MdLogout /> Logout{" "}
-      </button>
+      </button> */}
+      <form
+        action={async () => {
+          "use server";
+          await signOut();
+        }}
+      >
+        <button className="bg-none border-none flex items-center gap-8 rounded-[8px]  hover:bg-orange-200 hover:text-gray-800 mx-2 p-3 w-[95%]">
+          <MdLogout />
+          Logout
+        </button>
+      </form>
     </div>
   );
 };

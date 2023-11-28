@@ -183,7 +183,7 @@ const Login = () => {
               Log in
             </h2>
             <div className="mt-12">
-              <form action = {authenticate}>
+              <form action={authenticate}>
                 <div>
                   <div className="text-sm font-bold text-gray-700 tracking-wide">
                     Email Address
