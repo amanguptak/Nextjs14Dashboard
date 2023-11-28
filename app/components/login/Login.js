@@ -1,5 +1,8 @@
+"use client"
 import React from "react";
 import Link from "next/link";
+import Button from "./Button";
+import { authenticate } from "@/app/lib/actions";
 const Login = () => {
   return (
     <div>
@@ -180,7 +183,7 @@ const Login = () => {
               Log in
             </h2>
             <div className="mt-12">
-              <form>
+              <form action={authenticate}>
                 <div>
                   <div className="text-sm font-bold text-gray-700 tracking-wide">
                     Email Address
@@ -221,6 +224,10 @@ const Login = () => {
                   >
                     Log In
                   </button>
+             
+                  <Button/>
+     
+
                 </div>
               </form>
               <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">

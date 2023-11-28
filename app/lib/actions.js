@@ -5,6 +5,7 @@ import { connectToDatabase } from "./connection";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import bcrypt from "bcrypt"
+import { signIn } from "../auth";
 export const addUser = async (formData) => {
 
  
@@ -54,4 +55,13 @@ export const addProduct = async (formData) => {
     redirect("/dashboard/products")
 
 
+}
+
+
+export const authenticate = async () => {
+  try {
+    await signIn("google")
+  }catch(err){
+    console.log(err)
+  }
 }
